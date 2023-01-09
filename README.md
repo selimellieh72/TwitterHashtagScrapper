@@ -42,23 +42,17 @@ $ cd MetaMedApp
 $ pip install -r requirements.txt
 
 # Run the app
-expo start
+python main.py [QUERY_LENGTH]
 ```
+
+> **Info** > [QUERY_LENGTH] here means the minimum number of tweets for each hashtag. If not provided, will default to 50.
 
 ## Credits
 
-- [React](https://reactjs.org)
-- [React Native](https://reactnative.dev/)
-- [Expo](https://expo.dev/)
-- [Google's Cloud Vision](https://cloud.google.com/vision)
-- [Google Maps](https://developers.google.com/maps)
+- [Python](https://python.org)
+- [Selenium](https://www.selenium.dev/)
 
 ---
-
-> GitHub [@NinjaCoder8](https://github.com/NinjaCoder8) &nbsp;&middot;&nbsp;
-> LinkedIn [Charbel Daoud](https://www.linkedin.com/in/charbeldaoud/)
-
-> GitHub [@tonyykosseifyy](https://github.com/tonyykosseifyy)
 
 > [selimellieh.me](https://www.selimellieh.me) &nbsp;&middot;&nbsp;
 > GitHub [@selimellieh72](https://github.com/selimellieh72) &nbsp;&middot;&nbsp;
