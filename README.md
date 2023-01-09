@@ -22,7 +22,7 @@ TwitterHashtagScrapper is a handful Python script that scraps any number of twee
 
 - hashtags.txt<br/>
 
-  In hashtags.txt, you can write down any number of hashtags you want to scrap posts for. (Seperated by new lines)
+  - In hashtags.txt, you can write down any number of hashtags you want to scrap posts for. (Seperated by new lines)
 
 ## How To Use
 
