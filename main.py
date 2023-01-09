@@ -1,3 +1,4 @@
+import sys
 from termcolor import colored
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
@@ -10,7 +11,11 @@ from twitter import Twitter
 HASHTAGS_FILE_NAME = 'hashtags.txt'
 ACCOUNT_FILE_NAME = 'account.txt'
 SAVE_DIR = 'results'
-QUERY_LENGTH = 50
+QUERY_LENGTH = sys.argv[1] if len(
+    sys.argv) > 1 and sys.argv[1].isdigit() else 50
+
+print(QUERY_LENGTH)
+
 
 def main():
     # Load hashtags from local file
@@ -26,7 +31,7 @@ def main():
     # Sets up web driver using Google chrome
     print(colored('Setting up web driver...', 'blue'))
 
-    driver = webdriver.Chrome(service =Service(ChromeDriverManager().install()))
+    driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
     print(colored('Done!', 'green'))
 
     # Create a Twitter instance
@@ -41,13 +46,15 @@ def main():
     for hashtag in hashtags:
         # Scraping post ids for specific hashtag
         print(colored(f'Scraping post ids for hashtag: {hashtag} ', 'blue'))
-        post_ids = twitter.scrapForHashtag(hashtag, QUERY_LENGTH)
-        print(colored(f'Done Scrapping for hashtag: {hashtag}! (Found {len(post_ids)} posts ids)', 'green'))
+        post_ids = twitter.scrapForHashtag(hashtag,  QUERY_LENGTH)
+        print(colored(
+            f'Done Scrapping for hashtag: {hashtag}! (Found {len(post_ids)} posts ids)', 'green'))
 
         # Outputting result to a file
         with open(f'{SAVE_DIR}/{hashtag}.txt', 'w') as f:
             print(colored("Saving...", 'blue'))
             f.write(str('\n'.join(post_ids)))
             print(colored('Done!', 'green'))
+
 
 main()
