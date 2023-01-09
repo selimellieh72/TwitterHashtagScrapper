@@ -45,7 +45,7 @@ $ pip install -r requirements.txt
 python main.py [QUERY_LENGTH]
 ```
 
-> **Info** 
+> **Disclaimer** 
 > [QUERY_LENGTH] here means the minimum number of tweets for each hashtag. If not provided, will default to 50.
 
 ## Credits
