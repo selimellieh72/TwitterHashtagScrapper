@@ -12,7 +12,7 @@
 
 ## About
 
-TwitterHashtagScrapper is a handful Python script that scraps any number of tweets for a given hashtag name. The script is configurable and customizable as needed. I've made it originally for a client but since then I've decided to make it open source
+TwitterHashtagScrapper is a handful Python script that scraps any number of tweets for a given hashtag name. The script is configurable and customizable as needed. I've made it originally for a client but since then I've decided to make it open source.
 
 ## Configuration
 
@@ -36,7 +36,7 @@ To clone and run this application, you'll need [Python](https://www.python.org/d
 $ git clone https://github.com/selimellieh72/MetaMedApp
 
 # Go into the repository
-$ cd MetaMedApp
+$ cd TwitterHashtagScrapper
 
 # Install dependencies
 $ pip install -r requirements.txt
